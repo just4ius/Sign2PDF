@@ -1,3 +1,3 @@
-# Site for signature converter
+# Sign2PDF: Convert signed files to PDF with signer info 
 
-Проєкт для того, щоби конвертувати підписані asice та p7s файли у PDF формат із інформацією про підписанта вкінці.
+Конвертуйте підписані asice та p7s файли у PDF формат із інформацією про підписанта вкінці.
