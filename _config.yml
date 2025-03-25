@@ -1,0 +1,5 @@
+theme: jekyll-theme-cayman
+title: Sign2PDF
+description: Конвертор підписаних файлів
+github:
+    repository_url: https://github.com/just4ius/sign2pdf
