@@ -1,0 +1,157 @@
+---
+---
+
+@import "{{ site.theme }}";
+
+
+.page-header {
+  background-image: linear-gradient(90deg, #155799, #159957);
+}
+
+.btn {
+  background-color: #00FF7F;
+  color: #232323;
+  border: none;
+  border-radius: 13px;
+} 
+
+.btn:hover {
+  background-color: #7878FF;
+  box-shadow: 0px 5px 3px #2E00B0;
+  transition: background-color .1s ease-in-out, box-shadow .1s ease-in-out;
+}
+
+.wrapper {
+  background: white;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 960px;
+}
+
+.feature-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: middle;
+  flex-wrap: wrap;
+}
+
+.feature-box {
+  width: 45%;
+  max-width: 320px;
+  padding: 48px 32px 48px 32px;
+  text-align: center;
+}
+
+.feature-box h4 {
+  font-family: 'Lato', sans-serif;
+}
+
+.feature-box p {
+  font-family: 'Open Sans', sans-serif;
+  opacity: 0;
+}
+
+.feature-box:hover p {
+  opacity: 1;
+  transition: .3s ease;
+}
+
+.feature-box:hover .feature-icon {
+  width: 72px;
+  height: 72px;
+}
+
+.feature-icon {
+  width: 64px;
+  height: 64px;
+  transition: width .3s ease-in-out, height .3s ease-in-out;
+}
+
+.feature-wrapper2 {
+  top: 40%;
+  right: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+}
+
+.feature-icon2 {
+  height: 50px;
+  padding: 2px;
+}
+
+.docs {
+  transition: opacity .7s ease-in-out;
+}
+
+#mainbut.spinning::before {
+  content: "";
+  display: inline-block;
+  border: 7px solid darken(#00FF7F, 40%);
+  border-right: 7px solid white;
+  border-radius: 50%;
+  animation: rotate360 1s infinite linear, exist .1s forwards ease;
+}
+
+#mainbut:active {
+  box-shadow: 0 0 10px darken(#00FF7F, 10%) inset, 0px 1px 0 lighten(#00FF7F, 10%);
+  color: lighten(white, 30%);
+  background: darken(#00FF7F, 10%); 
+  background: linear-gradient(to bottom, lighten(#00FF7F, 10%) 0%, lighten(#00FF7F, 5%) 50%, darken(#00FF7F, 5%) 51%, darken(#00FF7F, 10%) 100%);
+}
+
+@keyframes rotate360 { 
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes exist { 
+  100% {
+    width: 15px;
+    height: 15px;
+  }
+}
+
+@keyframes showup {
+	0% {opacity:0;}
+	100% {opacity:1;}
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: white;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: black;
+  border-radius: 10px;
+}
+
+.page-header {
+  @include large {
+    padding: 35vh 40px;
+    height: 93vh;
+  }
+
+  @include medium {
+    padding: 35vh 40px;
+    height: 93vh;
+  }
+
+  @include small {
+    padding: 35vh 40px;
+    height: 93vh;
+  }
+}
+
+.snowflake {
+  position: fixed;
+  width: 10px;
+  height: 10px;
+  background: linear-gradient(white, white);
+  border-radius: 50%;
+  filter: drop-shadow(0 0 10px white);
+}
